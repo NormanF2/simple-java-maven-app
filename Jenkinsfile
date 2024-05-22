@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven:3.9.0'
-            args '-v /root/.m2:/root/.m2'
+            args '-v /root/.m2:/root/.m2 -w "${JENKINS_HOME}\\workspace\\MAVEN PIPELINE SCRATCH"'
         }
     }
     stages {
